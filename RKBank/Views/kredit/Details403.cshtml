@@ -1,0 +1,65 @@
+﻿@model RKBank.kredit
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>kredit</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.kartica.JMBG)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.kartica.JMBG)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.klijent.Ime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.klijent.Ime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DatumIzdavanja)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DatumIzdavanja)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DatumPovratka)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DatumPovratka)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Izlozenost)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Izlozenost)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Rizik)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Rizik)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Back to List", "Index")
+</p>

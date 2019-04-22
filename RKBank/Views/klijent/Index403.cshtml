@@ -1,0 +1,53 @@
+﻿@model IEnumerable<RKBank.klijent>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Ime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Prezime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AdresaStanovanja)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Zaposlenje)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DatumRodjenja)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ime)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Prezime)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AdresaStanovanja)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Zaposlenje)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DatumRodjenja)
+        </td>
+        <td>
+            @Html.ActionLink("Details", "Details", new { id=item.JMBG }) 
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - RKBank</title>
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <script src="~/Scripts/modernizr-2.8.3.js"></script>
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("RKBank", "Index", "klijent", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("Klijent", "Index", "klijent", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("Kartica", "Index", "kartica", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("Kredit", "Index", "kredit", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("Osiguranje", "Index", "osiguranje", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("Imovinsko", "Index", "imovinskoosiguranje", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("Putno", "Index", "putnoosiguranje", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("Zivotno", "Index", "zivotnoosiguranje", new { area = "" }, new { @class = "navbar-brand" })
+
+            </div>
+            @Html.ActionLink("Register", "", "Register.aspx", new { area = "" }, new { @class = "navbar-brand navbar-right" })
+            @Html.ActionLink(User.Identity.Name, "", "Login.aspx", new { area = "" }, new { @class = "navbar-brand navbar-right" })
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav"></ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - Tarik Kreso &amp; Belmin Ruhotina</p>
+        </footer>
+    </div>
+
+    <script src="~/Scripts/jquery-3.3.1.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+</body>
+</html>

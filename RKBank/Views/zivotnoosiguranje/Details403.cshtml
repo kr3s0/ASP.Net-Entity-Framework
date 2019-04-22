@@ -1,0 +1,66 @@
+﻿@model RKBank.zivotnoosiguranje
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>zivotnoosiguranje</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.klijent.Ime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.klijent.Ime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.osiguranje.JMBG)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.osiguranje.JMBG)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DatumPocetka)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DatumPocetka)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DatumZavrsetka)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DatumZavrsetka)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Status)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Status)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Izlozenost)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Izlozenost)
+        </dd>
+
+    </dl>
+</div>
+<p>
+   
+    @Html.ActionLink("Back to List", "Index")
+</p>

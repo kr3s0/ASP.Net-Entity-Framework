@@ -1,0 +1,72 @@
+﻿@model RKBank.putnoosiguranje
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>putnoosiguranje</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.klijent.Ime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.klijent.Ime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.osiguranje.JMBG)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.osiguranje.JMBG)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DatumPocetka)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DatumPocetka)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DatumZavrsetka)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DatumZavrsetka)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Status)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Status)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Izlozenost)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Izlozenost)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

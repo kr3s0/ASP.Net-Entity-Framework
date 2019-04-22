@@ -1,0 +1,57 @@
+﻿@model RKBank.klijent
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>klijent</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Ime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Prezime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Prezime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AdresaStanovanja)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AdresaStanovanja)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Zaposlenje)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Zaposlenje)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DatumRodjenja)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DatumRodjenja)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Back to List", "Index")
+</p>
